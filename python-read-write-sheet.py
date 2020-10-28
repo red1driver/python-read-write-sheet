@@ -1,10 +1,18 @@
 # Install the smartsheet sdk with the command: pip install smartsheet-python-sdk
 import smartsheet
+import configparser
 import logging
 import os
 
-api_token = 'Bearer noj9vy0jl3u5ea4iwq8igce4h4'
 
+config = configparser.ConfigParser()
+config.read(r"\SSconfig.ini")
+print(config.sections())
+
+
+
+
+"""
 _dir = os.path.dirname(os.path.abspath(__file__))
 
 # The API identifies columns by Id, but it's more convenient to refer to column names. Store a map here
@@ -53,8 +61,8 @@ smart = smartsheet.Smartsheet(access_token=api_token)
 smart.errors_as_exceptions(True)
 
 # Log all calls
-logging.basicConfig(filename='rwsheet.log', level=logging.INFO)
-
+#logging.basicConfig(filename='rwsheet.log', level=logging.INFO)
+logging.basicConfig(filename=_dir + '/rwsheet.log', level=logging.INFO)
 # Import the sheet
 result = smart.Sheets.import_xlsx_sheet(_dir + '/Sample Sheet.xlsx', header_row_index=0)
 
@@ -83,3 +91,5 @@ else:
     print("No updates required")
 
 print("Done")
+
+"""
