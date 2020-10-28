@@ -6,7 +6,7 @@ import os
 
 
 config = configparser.ConfigParser()
-config.read(r"\SSconfig.ini")
+config.read(r"config\config")
 print(config.sections())
 
 
