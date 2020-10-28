@@ -10,12 +10,10 @@ _dir = os.path.dirname(os.path.abspath(__file__))
 config = configparser.ConfigParser()
 config.read(_dir + "\config\config.ini")
 api_token=config['api_token']['token']
-print(api_token)
-
+#print(api_token)
 
 
 """
-_dir = os.path.dirname(os.path.abspath(__file__))
 
 # The API identifies columns by Id, but it's more convenient to refer to column names. Store a map here
 column_map = {}
