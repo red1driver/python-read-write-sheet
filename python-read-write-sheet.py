@@ -4,11 +4,13 @@ import configparser
 import logging
 import os
 
+#path = os.path.join(os.path.dirname(__file__)))
 
+_dir = os.path.dirname(os.path.abspath(__file__))
 config = configparser.ConfigParser()
-config.read(r"config\config")
-print(config.sections())
-
+config.read(_dir + "\config\config.ini")
+api_token=config['api_token']['token']
+print(api_token)
 
 
 
