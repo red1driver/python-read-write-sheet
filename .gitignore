@@ -90,3 +90,4 @@ ENV/
 # Rope project settings
 .ropeproject
 config.ini
+~$CA_dev.xlsx
