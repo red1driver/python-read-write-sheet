@@ -91,3 +91,4 @@ ENV/
 .ropeproject
 config.ini
 ~$CA_dev.xlsx
+*.xlsx
